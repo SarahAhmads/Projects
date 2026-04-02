@@ -1,0 +1,141 @@
+{
+    "hospital": {
+        "name": "Cairo Hospital",
+        "location": "Cairo, Egypt"
+    },
+    "departments": [
+        {
+            "name": "Cardiology",
+            "patients": [
+                {
+                    "name": "Ahmed Ali",
+                    "age": 45,
+                    "medical_record": "Heart condition - requires regular checkups"
+                },
+                {
+                    "name": "Sara Mohamed",
+                    "age": 38,
+                    "medical_record": "Hypertension - on medication"
+                },
+                {
+                    "name": "Mahmoud Hassan",
+                    "age": 55,
+                    "medical_record": "Previous heart attack - recovery"
+                }
+            ],
+            "staff": [
+                {
+                    "name": "Dr. Mohamed Samir",
+                    "age": 42,
+                    "position": "Cardiologist"
+                },
+                {
+                    "name": "Dr. Amira Khaled",
+                    "age": 35,
+                    "position": "Cardiologist"
+                },
+                {
+                    "name": "Nurse Fatma",
+                    "age": 28,
+                    "position": "Nurse"
+                },
+                {
+                    "name": "George Samueil",
+                    "age": 30,
+                    "position": "Doctor"
+                }
+            ]
+        },
+        {
+            "name": "Neurology",
+            "patients": [
+                {
+                    "name": "Omar Hassan",
+                    "age": 52,
+                    "medical_record": "Chronic migraine"
+                },
+                {
+                    "name": "Layla Ahmed",
+                    "age": 34,
+                    "medical_record": "Epilepsy - controlled"
+                }
+            ],
+            "staff": [
+                {
+                    "name": "Dr. Yasser Ali",
+                    "age": 48,
+                    "position": "Neurologist"
+                },
+                {
+                    "name": "Nurse Hoda",
+                    "age": 32,
+                    "position": "Nurse"
+                }
+            ]
+        },
+        {
+            "name": "Pediatrics",
+            "patients": [
+                {
+                    "name": "Youssef Khaled",
+                    "age": 8,
+                    "medical_record": "Flu - recovering"
+                },
+                {
+                    "name": "Mariam Tarek",
+                    "age": 5,
+                    "medical_record": "Allergies"
+                },
+                {
+                    "name": "Adam Mostafa",
+                    "age": 10,
+                    "medical_record": "Broken arm - healing"
+                }
+            ],
+            "staff": [
+                {
+                    "name": "Dr. Hana Mohamed",
+                    "age": 40,
+                    "position": "Pediatrician"
+                },
+                {
+                    "name": "Nurse Salma",
+                    "age": 26,
+                    "position": "Nurse"
+                }
+            ]
+        },
+        {
+            "name": "Emergency",
+            "patients": [
+                {
+                    "name": "Karim Nasser",
+                    "age": 29,
+                    "medical_record": "Car accident - stable"
+                },
+                {
+                    "name": "omar",
+                    "age": 18,
+                    "medical_record": "stomachache"
+                }
+            ],
+            "staff": [
+                {
+                    "name": "Dr. Tarek Mansour",
+                    "age": 38,
+                    "position": "Emergency Physician"
+                },
+                {
+                    "name": "Dr. Nadia Salem",
+                    "age": 33,
+                    "position": "Emergency Physician"
+                },
+                {
+                    "name": "Nurse Ahmed",
+                    "age": 30,
+                    "position": "Nurse"
+                }
+            ]
+        }
+    ]
+}
