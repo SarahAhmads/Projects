@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Ford GoBike Dashboard – Premium Polish
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f6fa;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    color: #1e293b;
+}
+
+/* ==========================================================================
+   Top Filter Bar – Refined
+   ========================================================================== */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.8rem;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.topbar-brand {
+    color: #0f172a;
+    font-size: 1.15rem;
+    font-weight: 700;
+    white-space: nowrap;
+    padding-right: 1.2rem;
+    border-right: 1.5px solid #e8ecf2;
+    margin-right: 0.3rem;
+    letter-spacing: -0.2px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+}
+
+.filter-group label,
+.filter-group-slider label {
+    color: #64748b;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-group-slider {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex: 2;
+    min-width: 160px;
+    max-width: 260px;
+}
+
+/* Slider */
+.rc-slider-mark-text {
+    color: #64748b !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+}
+
+.rc-slider-track {
+    background-color: #6366f1 !important;
+    height: 3px !important;
+}
+
+.rc-slider-handle {
+    border-color: #6366f1 !important;
+    background: #fff !important;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: -7px !important;
+}
+
+.rc-slider-rail {
+    background-color: #e8ecf2 !important;
+    height: 3px !important;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+.content {
+    margin-top: 60px;
+    padding: 0.7rem 1.2rem;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Cards – Ultra-soft design
+   ========================================================================== */
+.card-custom {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.035),
+        0 0 1px rgba(0, 0, 0, 0.06);
+    padding: 12px 16px;
+    border: none;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card-custom:hover {
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.07),
+        0 0 1px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+}
+
+/* ── KPI Row ─────────────────────────────────────────────────────────────── */
+.kpi-row {
+    display: flex;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+
+.kpi-row .card-custom {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Colored accent stripe on top */
+.kpi-row .card-custom::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 14px 14px 0 0;
+    background: linear-gradient(90deg, #6366f1, #818cf8);
+}
+
+.kpi-row .card-custom:nth-child(2)::after {
+    background: linear-gradient(90deg, #06b6d4, #22d3ee);
+}
+
+.kpi-row .card-custom:nth-child(3)::after {
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.kpi-row .card-custom:nth-child(4)::after {
+    background: linear-gradient(90deg, #ec4899, #f472b6);
+}
+
+/* ── Chart Rows ──────────────────────────────────────────────────────────── */
+.chart-top-row {
+    display: flex;
+    gap: 0.6rem;
+    flex: 3;
+    min-height: 0;
+}
+
+.chart-bottom-row {
+    display: flex;
+    gap: 0.6rem;
+    flex: 2;
+    min-height: 0;
+}
+
+.chart-top-row .card-custom,
+.chart-bottom-row .card-custom {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chart-top-row .card-custom h4,
+.chart-bottom-row .card-custom h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e293b;
+    letter-spacing: 0.2px;
+}
+
+.chart-top-row .card-custom hr,
+.chart-bottom-row .card-custom hr {
+    margin: 4px 0 2px;
+    border: none;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* ── KPI Text ────────────────────────────────────────────────────────────── */
+.kpi-title {
+    color: #64748b;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.kpi-value {
+    color: #0f172a;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 4px;
+    letter-spacing: -0.5px;
+}
