@@ -1,0 +1,43 @@
+services:
+  redis:
+    image: redis:alpine
+    container_name: audio-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - audio-net
+    restart: always
+
+  inference-api:
+    build:
+      context: ./services/audio-inference-service
+    container_name: audio-inference-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+    networks:
+      - audio-net
+    restart: on-failure
+
+  notification-worker:
+    build:
+      context: ./services/notification-service
+    container_name: audio-notification-worker
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+    networks:
+      - audio-net
+    restart: on-failure
+
+networks:
+  audio-net:
+    driver: bridge
